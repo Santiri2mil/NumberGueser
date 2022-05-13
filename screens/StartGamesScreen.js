@@ -15,6 +15,7 @@ const StartGameScreen = ({ onStartGame, gameOverHandler }) => {
   const [confirmed, setConfirmed] = useState(false);
   const [selectedNumber, setSelectedNumber] = useState(undefined);
   const [name, setName]=useState(undefined)
+  const [generation, setGeneration]=useState(undefined)
 
   const numberInputHandler = (input) => {
     setEnteredValue(input.replace(/[^0-9]/g, ""));
@@ -36,6 +37,7 @@ const StartGameScreen = ({ onStartGame, gameOverHandler }) => {
   const setPokemon=async()=>{
     set[name, img]=useFetchPokemon(selectedNumber);
     setName[name]
+    setGeneration[generation]
 
   }
 

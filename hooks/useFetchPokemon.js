@@ -4,7 +4,9 @@ export const useFetchPokemon = async(dexNum)=>{
     
     const response =await fetch(`{urls.pkemonPath}/${dexNum}`)
     const data=await response.json()
-    const{name, sprites:{front_default: ing}}=data
+    const{name, sprites:{front_default: ing},generation:{}}=data
+
+
     
 
 
